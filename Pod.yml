@@ -12,5 +12,5 @@ spec:
       image: spring-boot-kafka
       imagePullPolicy: IfNotPresent
       ports:
-        # containerPort is the port exposed by the container (where nodejs express api is listening)
+        # containerPort is the port exposed by the container
         - containerPort: 9000
