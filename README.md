@@ -10,7 +10,7 @@
 3. Create service using "kubectl apply -f Service.yml"
 
 ## Config
-Kafka conifg is stored in Springs application.properties file in the resources folder. Uses the kafka service in the kafka-ca1 namespace to connect to the brokers.
+Kafka config is stored in Springs application.properties file in the resources folder. Uses the kafka service in the kafka-ca1 namespace to connect to the brokers.
 Deployment is set to 3 pods.
 
 ## Execution
