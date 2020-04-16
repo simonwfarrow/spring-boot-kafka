@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-boot-kafka-deployment
+  labels:
+    app: spring-boot-kafka
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: spring-boot-kafka
+  template:
+    metadata:
+      labels:
+        app: spring-boot-kafka
+    spec:
+      containers:
+      - name: spring-boot-kafka
+        # get latest version of image
+        image: spring-boot-kafka
+        imagePullPolicy: IfNotPresent
+        ports:
+        # containerPort is the port exposed by the container (where nodejs express api is listening)
+        - containerPort: 9000
