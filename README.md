@@ -1,5 +1,13 @@
 # spring-boot-kafka
 
+The purpose of this repo was to learn:
+
+1. How to run and deploy containers to Kubernetes locally
+2. How to run a Kafka cluster on Kubernetes
+3. How to dockerise a java application to run on Kubernetes, making use of the Kafka cluster
+
+The Spring application code in this repo was replicated from this [guide](https://www.confluent.io/blog/apache-kafka-spring-boot-application/)
+
 ## Pre-req
 1. Minikube is configured and running.
 2. This guide has been followed to setup Kafka cluster on Kubernetes: [guide](https://technology.amis.nl/2019/03/24/running-apache-kafka-on-minikube/)
