@@ -24,5 +24,5 @@ Deployment is set to 3 pods.
 ## Execution
 1. Get minikube IP address via "minikube ip".
 2. Get external service port for Spring web app via "kubectl get svc" -> ```spring-boot-service        NodePort    10.98.95.188    <none>        9000: --->32086<---- /TCP   65m```
-3. Post a request to http://${minikubeip}:${externalport}/kafka/publish with a query param named 'message'
+3. Post a request to http://${minikubeip}:${externalport}/kafka/publish?message=hello
 4. View Pod logs to see which Pod recieved the request and produced the message and which Pod consumed the message
