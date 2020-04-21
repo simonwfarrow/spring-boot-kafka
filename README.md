@@ -11,6 +11,7 @@ The Spring application code in this repo was replicated from this [guide](https:
 ## Pre-req
 1. Minikube is configured and running.
 2. This guide has been followed to setup Kafka cluster on Kubernetes: [guide](https://technology.amis.nl/2019/03/24/running-apache-kafka-on-minikube/)
+3. Helm [chart](https://github.com/helm/charts/tree/master/stable/prometheus-operator) for Promehteus has been deployed to the monitoring namespace
 
 ## Setup
 1. Build docker image with "docker build -t spring-boot-kafka ."
