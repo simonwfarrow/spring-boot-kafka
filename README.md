@@ -16,6 +16,15 @@ The Spring application code in this repo was replicated from this [guide](https:
 1. Build docker image with "docker build -t spring-boot-kafka ."
 2. Deploy to kuberenetes with "kubectl apply -f Deployment.yml"
 3. Create service using "kubectl apply -f Service.yml"
+4. Need to add Prometheus scrape config in order to pick up the actuator endpoint for the Spring app: In the kubernetes dashboard, change to the monitoring namespace, under ConfigMaps select monitoring-prometheus-server , add the following scrape config 
+```
+- job_name: spring_micrometer
+      metrics_path: /actuator/prometheus
+      scrape_interval: 5s
+      static_configs:
+      - targets: 
+        - 192.168.64.8:32086 <----change this to match minikup ip and port of the spring-boot-service
+```
 
 ## Config
 Kafka config is stored in Springs application.properties file in the resources folder. Uses the kafka service in the kafka-ca1 namespace to connect to the brokers.
