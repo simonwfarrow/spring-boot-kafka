@@ -39,3 +39,5 @@ Deployment is set to 3 pods.
 2. Get external service port for Spring web app via "kubectl get svc" -> ```spring-boot-service        NodePort    10.98.95.188    <none>        9000: --->32086<---- /TCP   65m```
 3. Post a request to http://${minikubeip}:${externalport}/kafka/publish?message=hello
 4. View Pod logs to see which Pod recieved the request and produced the message and which Pod consumed the message
+5. View actuator endpoint on http:/${/minikubeip}:${externalport}/actuator/prometheus
+6. View in Prometheus dashboard and Grafana dahsboard - metric is published_message_count_total
