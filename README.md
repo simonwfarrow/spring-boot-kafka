@@ -5,6 +5,7 @@ The purpose of this repo was to learn:
 1. How to run and deploy containers to Kubernetes locally
 2. How to run a Kafka cluster on Kubernetes
 3. How to dockerise a java application to run on Kubernetes, making use of the Kafka cluster
+4. How to monitor the application using Prometheus and Grafana
 
 The Spring application code in this repo was replicated from this [guide](https://www.confluent.io/blog/apache-kafka-spring-boot-application/)
 
