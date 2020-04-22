@@ -18,6 +18,8 @@ The Spring application code in this repo was replicated from this [guide](https:
 2. Deploy to kuberenetes with "kubectl apply -f Deployment.yml"
 3. Create service using "kubectl apply -f Service.yml"
 4. Need to add Prometheus scrape config in order to pick up the actuator endpoint for the Spring app: In the kubernetes dashboard, change to the monitoring namespace, under ConfigMaps select monitoring-prometheus-server , add the following scrape config 
+TODO: change to use pass in the scrape as a config param to the chart.
+
 ```
 - job_name: spring_micrometer
       metrics_path: /actuator/prometheus
